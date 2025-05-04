@@ -1,6 +1,6 @@
 import React from 'react';
-
 function Clientes() {
-  return <h1>Gestión de Clientes</h1>;
+  
+  return <h1 className="text-center">Gestión de Clientes</h1>;
 }
 export default Clientes;
