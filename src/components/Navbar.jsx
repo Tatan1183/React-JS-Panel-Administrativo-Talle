@@ -1,22 +1,30 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom'; // NavLink resalta el enlace activo
+import { NavLink, Link } from 'react-router-dom';
+import logoImage from '../assets/Logouts.png';
 
 function Navbar() {
-  // Puedes reemplazar "MiLogo" con una etiqueta <img> si tienes un archivo de logo
-  const logo = "AdminPanel";
+  // Ya no necesitamos la variable de texto 'logo'
 
   return (
-    // Navbar de Bootstrap: oscura, expandible en pantallas grandes
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        {/* Enlace del logo a la página de inicio */}
-        <Link className="navbar-brand" to="/">{logo}</Link>
+        {/* 2. Usa el Link como antes, pero dentro pon la etiqueta <img> */}
+        <Link className="navbar-brand" to="/">
+          {/* 3. Añade la etiqueta <img> */}
+          <img
+            src={logoImage} // Usa la variable importada
+            alt="Logo del Panel Administrativo" // Texto alternativo descriptivo
+            style={{ height: '30px', marginRight: '10px' }} // Ajusta la altura (ej: 30px) y añade un margen derecho
+          />
+          {/* Opcional: Si quieres mantener el texto al lado del logo, puedes añadirlo aquí */}
+          {/* AdminPanel */}
+        </Link>
 
         {/* Botón para menú hamburguesa en pantallas pequeñas */}
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse" // Atributos para la funcionalidad de Bootstrap (requiere JS de Bootstrap si lo añades)
+          data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
@@ -27,11 +35,10 @@ function Navbar() {
 
         {/* Contenedor de los enlaces de navegación */}
         <div className="collapse navbar-collapse" id="navbarNav">
-          {/* 'ms-auto' empuja los enlaces a la derecha */}
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <NavLink
-                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} // Clase activa si la ruta coincide
+                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                 to="/clientes"
               >
                 Clientes
@@ -54,12 +61,10 @@ function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              {/* El enlace Logout por ahora solo redirige a inicio.
-                  En una app real, aquí ejecutarías una función de logout. */}
               <NavLink
                 className="nav-link"
-                to="/" // O podrías tener una ruta /logout que maneje la lógica
-                onClick={() => console.log("Simulando Logout...")} // Ejemplo simple
+                to="/"
+                onClick={() => console.log("Simulando Logout...")}
               >
                 Logout
               </NavLink>
