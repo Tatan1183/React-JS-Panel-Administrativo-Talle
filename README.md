@@ -57,10 +57,3 @@ Este es un proyecto de ejemplo que demuestra cómo construir un panel administra
 
 ![alt text](image-2.png)
 
-
-## Próximos Pasos (Ideas)
-
-*   Implementar lógica real para el botón Logout (manejo de estado de autenticación).
-*   Añadir contenido real a las páginas (tablas, formularios, etc.).
-*   Integrar un backend para obtener datos dinámicos.
-*   Mejorar la gestión del estado (Context API, Redux, Zustand).
