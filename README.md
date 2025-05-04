@@ -57,8 +57,6 @@ Este es un proyecto de ejemplo que demuestra cómo construir un panel administra
 
 ![alt text](image-2.png)
 
-![Captura de Pantalla del Panel Administrativo](./screenshot.png)
-*(Asegúrate de guardar una imagen llamada `screenshot.png` en la raíz del proyecto)*
 
 ## Próximos Pasos (Ideas)
 
